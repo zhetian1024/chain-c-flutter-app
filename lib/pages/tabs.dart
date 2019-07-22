@@ -133,10 +133,7 @@ class _Tabs extends State<Tabs> {
             icon: Icon(Icons.home),
              title: Text(IntlUtil.getString(context, Ids.titileNews)),
           ),
-          // BottomNavigationBarItem(
-          //     icon: Icon(Icons.category), title: Text(IntlUtil.getString(context, Ids.titleMachine))),
-          // BottomNavigationBarItem(
-          //     icon: Icon(Icons.settings), title: Text(IntlUtil.getString(context, Ids.titileNews))),
+         
         ],
         currentIndex: this._currentIndex,
         type: BottomNavigationBarType.fixed,

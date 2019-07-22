@@ -35,16 +35,25 @@ class _MyApp extends State<MyApp> {
     setLocalizedValues(localizedValues); //配置多语言资源
   }
 
+  void getlanguage() {
+    var language = Provide.value<Auth>(context).getAuthState().language;
+    setState(() {
+      _locale = new Locale(language);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
+    getlanguage();
+    print(_locale);
     return new MaterialApp(
       theme: ThemeData.light().copyWith(
         primaryColor: _themeColor,
         accentColor: _themeColor,
         indicatorColor: Colors.white,
       ),
-      locale: new Locale('en','us'),
+      locale: _locale,
       localizationsDelegates: [
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,

@@ -25,7 +25,7 @@ Map<String, Map<String, Map<String, String>>> localizedValues = {
     }
   },
   'zh': {
-    'CN': {Ids.titleHome: '首页', Ids.titleMachine: '设备', Ids.titleMachine: '资讯'},
+    'CN': {Ids.titleHome: '首页', Ids.titleMachine: '设备', Ids.titileNews: '资讯'},
     'HK': {
       Ids.titleHome: '主頁',
     },

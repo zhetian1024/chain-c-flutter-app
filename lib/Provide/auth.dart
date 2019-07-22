@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:chain_c_app_flutter/config/auth_interface.dart';
 import 'package:chain_c_app_flutter/config/aws_interface.dart';
 
-
 class Auth with ChangeNotifier {
   AuthState initialAuthState = AuthState(
       currentUser: null,
@@ -14,8 +13,12 @@ class Auth with ChangeNotifier {
       smsSentCount: 0,
       awsCreds: null,
       isAwsCredRefreshing: false,
-      idtoken: null);
-  
+      idtoken: null,
+      language: 'zh',
+      theme: "blue");
+  AuthState getAuthState() {
+    return initialAuthState;
+  }
 }
 
 class AuthState {
@@ -29,6 +32,8 @@ class AuthState {
   AWSSTSAssumeRoleResult awsCreds;
   bool isAwsCredRefreshing;
   IdToken idtoken;
+  String language;
+  String theme;
 
   AuthState(
       {this.currentUser,
@@ -40,5 +45,7 @@ class AuthState {
       this.isAuthing,
       this.awsCreds,
       this.isAwsCredRefreshing,
-      this.idtoken});
+      this.idtoken,
+      this.language,
+      this.theme});
 }
