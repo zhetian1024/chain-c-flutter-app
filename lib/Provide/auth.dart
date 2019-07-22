@@ -16,14 +16,13 @@ class Auth with ChangeNotifier {
       idtoken: null,
       language: 'zh',
       theme: Colors.pink);
-  AuthState getAuthState() {
-    return initialAuthState;
-  }
 
-  void settheme(Color key) {
+  AuthState get authState => initialAuthState;
+
+  Future settheme(Color key) async {
     initialAuthState.theme = key;
-    
-     notifyListeners();
+    initialAuthState.language = 'en';
+    notifyListeners();
   }
 }
 

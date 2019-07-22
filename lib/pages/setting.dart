@@ -2,31 +2,31 @@ import 'package:flutter/material.dart';
 import 'package:chain_c_app_flutter/res/language.dart';
 import 'package:fluintl/fluintl.dart';
 import 'package:chain_c_app_flutter/res/colors.dart';
-import 'package:provide/provide.dart';
+import 'package:provider/provider.dart';
 import 'package:chain_c_app_flutter/Provide/auth.dart';
 
-
-
 String getlanguageModel(String key) {
-      String languageModel = '';
-      switch (key) {
-        case 'zh':
-          languageModel = '中文';
-          break;
-        case 'en':
-          languageModel = 'English';
-          break;
-        default:
-          languageModel = '中文';
-      }
-      return languageModel;
-    }
+  String languageModel = '';
+  switch (key) {
+    case 'zh':
+      languageModel = '中文';
+      break;
+    case 'en':
+      languageModel = 'English';
+      break;
+    default:
+      languageModel = '中文';
+  }
+  return languageModel;
+}
+
 class SettingPage extends StatelessWidget {
+  
   @override
   Widget build(BuildContext context) {
-    String languageModel = getlanguageModel(Provide.value<Auth>(context).getAuthState().language);
-
-    
+    final provides = Provider.of<Auth>(context);
+    String languageModel =
+        getlanguageModel(provides.authState.language);
 
     return Scaffold(
       appBar: AppBar(
@@ -57,7 +57,7 @@ class SettingPage extends StatelessWidget {
                   return new InkWell(
                     onTap: () {
                       print(key);
-                      Provide.value<Auth>(context).settheme(themeColorMap[key]);
+                      provides.settheme(themeColorMap[key]);
                     },
                     child: new Container(
                       margin: EdgeInsets.all(5.0),

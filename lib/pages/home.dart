@@ -2,7 +2,8 @@ import 'dart:developer';
 import 'package:chain_c_app_flutter/Provide/auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:provide/provide.dart';
+import 'package:provider/provider.dart';
+
 import '../Provide/auth.dart';
 import 'package:chain_c_app_flutter/config/common.dart';
 import 'package:chain_c_app_flutter/res/language.dart';
@@ -14,13 +15,21 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    Color theme = Provide.value<Auth>(context).getAuthState().theme;
+    Color theme = Provider.of<Auth>(context).authState.theme;
 
-    return InkWell(onTap: () {
-      // print(Provide.value<Auth>(context).getIdtoken();
-    }, 
-    child:Text(theme.toString())
-     
-    );
+    return InkWell(
+        onTap: () {
+          // print(Provide.value<Auth>(context).getIdtoken();
+        },
+        child: Container(
+          color: theme,
+          child: Column(
+            children: <Widget>[
+              Text(
+                theme.toString(),
+              )
+            ],
+          ),
+        ));
   }
 }
