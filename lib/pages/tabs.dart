@@ -3,6 +3,8 @@ import 'package:flutter/widgets.dart';
 import 'home.dart';
 import 'machine.dart';
 import 'news.dart';
+import 'package:chain_c_app_flutter/res/language.dart';
+import 'package:fluintl/fluintl.dart';
 
 class Tabs extends StatefulWidget {
   @override
@@ -15,7 +17,7 @@ class Tabs extends StatefulWidget {
 class _Tabs extends State<Tabs> {
   List pages = [Home(), Machine(), News()];
   int _currentIndex = 0;
-  List _menubar = ['登录', '设备', '资讯'];
+ 
 
   GlobalKey<ScaffoldState> _globalKey = new GlobalKey();
   @override
@@ -89,10 +91,15 @@ class _Tabs extends State<Tabs> {
                 color: Colors.white,
                 child: Column(
                   children: <Widget>[
-                    Container(
-                      height: 50,
-                      color: Colors.amber[600],
-                      child: const Center(child: Text('登录')),
+                    InkWell(
+                      child: Container(
+                        height: 50,
+                        color: Colors.white,
+                        child: const Center(child: Text('登录')),
+                      ),
+                      onTap: () {
+                        Navigator.pushNamed(context, '/login');
+                      },
                     ),
                     Container(
                       height: 50,
@@ -116,12 +123,20 @@ class _Tabs extends State<Tabs> {
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            title: Text("首页"),
+             title: Text(IntlUtil.getString(context, Ids.titleHome)),
           ),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.category), title: Text("设备")),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.settings), title: Text("资讯")),
+            BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+             title: Text(IntlUtil.getString(context, Ids.titleMachine)),
+          ),
+            BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+             title: Text(IntlUtil.getString(context, Ids.titileNews)),
+          ),
+          // BottomNavigationBarItem(
+          //     icon: Icon(Icons.category), title: Text(IntlUtil.getString(context, Ids.titleMachine))),
+          // BottomNavigationBarItem(
+          //     icon: Icon(Icons.settings), title: Text(IntlUtil.getString(context, Ids.titileNews))),
         ],
         currentIndex: this._currentIndex,
         type: BottomNavigationBarType.fixed,

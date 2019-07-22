@@ -3,10 +3,11 @@ import 'package:flutter/material.dart';
 import 'home.dart';
 import 'machine.dart';
 import 'news.dart';
-
+import 'package:chain_c_app_flutter/pages/login.dart';
 
 
 final routes = {'/': (context) => Tabs(),
+'/login':(context)=>Login(),
 //  '/music': (context,{arguments}) => MusicPlayerExample(arguments:arguments),
 // '/search': (context) => Search(),
 // '/searchDetail': (context,{arguments}) => SearchDetail(arguments:arguments),

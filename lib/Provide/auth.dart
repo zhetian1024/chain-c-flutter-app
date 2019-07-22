@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:chain_c_app_flutter/config/auth_interface.dart';
 import 'package:chain_c_app_flutter/config/aws_interface.dart';
 
+
 class Auth with ChangeNotifier {
   AuthState initialAuthState = AuthState(
       currentUser: null,
@@ -14,7 +15,7 @@ class Auth with ChangeNotifier {
       awsCreds: null,
       isAwsCredRefreshing: false,
       idtoken: null);
-  getIdtoken() {}
+  
 }
 
 class AuthState {

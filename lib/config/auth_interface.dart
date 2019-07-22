@@ -86,3 +86,7 @@ class AuthLoginWithSMSSendCodeResponse {
     this.provider
   });
 }
+class IdToken {
+  String token;
+  IdToken({this.token});
+}

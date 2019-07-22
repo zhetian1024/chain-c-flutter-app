@@ -1,0 +1,148 @@
+{
+    "HOME": {
+        "HI": "我是翻译器"
+    },
+    "MENU": {
+        "TITLE": "铁链"
+    },
+    "AUTH": {
+        "TITLE": "登陆与验证",
+        "INPUT_CONFIRM_CODE": "验证码",
+        "LOGGING": "正在登陆，请稍后",
+        "LOGOUTING": "正在注销，请稍后",
+        "LOGININ_SUCCESS": "登陆成功，正在即将把你转向登陆前页面",
+        "LOGINOUT_SUCCESS": "注销成功，正在回到首页"
+    },
+    "LOGIN": {
+        "LOGIN": "登陆",
+        "LOGINOUT": "登出",
+        "USERNAME": "电话号码:",
+        "COUNTRY": "请选择国家:",
+        "RETRIED": "获取证码",
+        "RETRY": "后重发验证码"
+    },
+    "ERROR": {
+        "USERNAME": "请输入一个有效的手机号码:",
+        "FILE_ANDROID_CHOOSER_ERROR_01": "错误代码【E0F01A】系统无法访问此文件：文件选择器无法打开你选中的文件，可能的原因是安卓系统默认文件选择器出错。请使用其他文件选择器重试！如果问题任然存在，请联系客服热线。",
+        "TPYEPHONE": "手机号码一般格式是：",
+        "UserNotFound": "找不到相关的用户",
+        "SELECT_COUNTRY": "请选择您的国家",
+        "AUTHCODE": "验证码必须为6位数字",
+        "NETWORK": "网络异常，请检查网络是否可用",
+        "ID_TOKEN": "身份证令牌失效, 请重新登陆",
+        "UNSUPPORT_COUNTRY": "错误代码【EP003354】你所在国家暂时不能使用此服务",
+        "AWS_CREDENTIALS": "AWS临时凭证失效，请重新登陆",
+        "FILE_ALREADY_LISTED": "文件已经被添加到列表",
+        "REFREASH_CREDENTIALS_FAILED": "错误代码【E0013】刷新凭证失败，请关闭APP重试。如果问题任然存在，请联系客服热线。",
+        "DOWNLOAD_FAIL": "错误代码【ES3D404】下载失败：下载S3文件出错，可能的原因是无法找到文件地址。请重试，如果问题任然存在，请联系客服热线。",
+        "NEED_LOGIN": "此操作需要登陆，请于登陆页面登陆后再操作。",
+        "NOT_SUPPORT_MIME": "错误代码【EF00405】文件不受支持：你的系统不支持打开此类型文件。",
+        "LOGIN_WITH_SMS_FAILED": "错误代码【E0L456】验证码失败：你输入的验证信息有误，请重新输入"
+    },
+    "LABEL": {
+        "LOADING": "加载中...",
+        "DOWNLOADING": "正在下载...",
+        "UPLOADING": "正在上传...",
+        "VERIFYING": "正在验证...",
+        "SMS_CODE_SENT": "短信验证码已经从铁链服务器，请等候验证码到达你的手机"
+    },
+    "COUNTRY_CODE": {
+        "CN": "中国",
+        "US": "美国",
+        "JP": "日本",
+        "TW": "中国台湾",
+        "HK": "中国香港",
+        "MO": "中国澳门"
+    },
+    "USER": {
+        "TITLE": "用户",
+        "REALPEOPLE": "实名验证",
+        "NEXT": "下一步",
+        "ISUPIMAGE": "上传",
+        "ISUPIMAGEIMAGE": "上传图片",
+        "COMERA": "拍照",
+        "LOCALIMAGE": "本地文件",
+        "VERIFYSUCCESS": "恭喜您，验证成功",
+        "PLEASEBLCK": "请点击确定返回",
+        "NESTSTOP": "下一步",
+        "COMFIRM": "确定",
+        "SERVICEWRONG": "服务器错误，请重新认证",
+        "WRONG": "后台出错，请与铁链工作人员联系",
+        "IMAGEWRONG": "图片识别错误请重新上传",
+        "HINTUSER": "请认真审核其他信息是否正确"
+    },
+    "CCAMERA": {
+        "TITLE": "铁链相机，记录精彩一刻！",
+        "INFO": "你的照片会被加密储存上传，请放心使用。"
+    },
+    "SHUOSHUO": {
+        "SHUOSHUO": "老铁圈",
+        "ADDSHUOSHUO": "发布老铁圈",
+        "CONTENT": "请输入内容",
+        "TITLE": "老铁圈",
+        "ONENSURE": "确定",
+        "ONCANCEL": "取消",
+        "IMAGEORFILE": "选择图片或文件"
+    },
+    "ORDER": {
+        "ORDER": "订单中心",
+        "RELEASEORDER": "发布订单",
+        "CHOOSEIMAGE": "选择图片",
+        "TITLE":"标题",
+        "CONTENT": "请输入内容",
+        "ONENSURE": "确定",
+        "ONCANCEL": "取消",
+        "IMAGEORFILE": "选择图片或文件"
+    },
+    "UI": {
+        "DELETE": "删除"
+    },
+    "TEAM": {
+        "TITLE": "团队中心",
+        "COMPANYVERIFY": {
+            "COMPANYVERIFY": "企业验证",
+            "ISUPIMAGEIMAGE": "上传图片",
+            "COMERA": "拍照",
+            "LOCALIMAGE": "本地文件",
+            "VERIFYSUCCESS": "恭喜您，验证成功",
+            "PLEASEBLCK": "请点击下一步返回",
+            "NESTSTOP": "下一步",
+            "COMFIRM": "确定",
+            "SERVICEWRONG": "服务器错误，请重新认证",
+            "WRONG": "后台出错，请与铁链工作人员联系",
+            "IMAGEWRONG": "图片识别错误请重新上传"
+        }
+    },
+    "TEST": {
+        "TITLE": "测试"
+    },
+    "AUTH_GUARD": {
+        "NEED_AUTH": "登陆信息已经过期，请重新登陆！"
+    },
+    "JUHEERROR": {
+        "ERROR210301": "错误代码【JH210301】，没有此用户，请联系客服。",
+        "ERROR210304": "错误代码【JH210304】，服务器出错，请联系客服。",
+        "ERROR210305": "错误代码【JH210305】，服务器出错，请联系客服。",
+        "ERROR210306": "错误代码【JH210306】，服务器出错，请联系客服。",
+        "ERROR210307": "错误代码【JH210307】，服务器出错，请联系客服。",
+        "ERROR210308": "错误代码【JH210308】，服务器出错，请联系客服。",
+        "ERROR210309": "错误代码【JH210309】，服务器出错，请联系客服。",
+        "ERROR10001": "错误代码【JH10001】，服务器出错，请联系客服。",
+        "ERROR10002": "错误代码【JH10002】，服务器出错，请联系客服。",
+        "ERROR10003": "错误代码【JH10003】，服务器出错，请联系客服。",
+        "ERROR10004": "错误代码【JH10004】，服务器出错，请重试",
+        "ERROR10005": "错误代码【JH10005】，服务器出错，请重试",
+        "ERROR10007": "错误代码【JH10007】，服务器出错，请联系客服。",
+        "ERROR10008": "错误代码【JH10008】，您被禁止实名认证，请联系客服",
+        "ERROR10009": "错误代码【JH10009】，服务器出错，请及时联系客服。",
+        "ERROR10011": "错误代码【JH10011】，服务器出错，请及时联系客服。",
+        "ERROR10012": "错误代码【JH10012】，服务器出错，请联系客服。",
+        "ERROR10013": "错误代码【JH10013】，服务器出错，请联系客服。",
+        "ERROR10014": "错误代码【JH10014】，服务器出错，请及时联系客服。",
+        "ERROR10020": "错误代码【JH10020】，服务器出错，请联系客服。",
+        "ERROR10021": "错误代码【JH10021】，服务器出错，请联系客服。"
+    },
+    "BAIDUERROR":{
+        "ERROR10001":"错误代码【JH10021】，请拍照重试，确定身份证位置是否正面朝上，如果还是不能认证成功，请联系客服"
+    }
+}
