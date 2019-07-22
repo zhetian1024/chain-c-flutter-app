@@ -15,9 +15,15 @@ class Auth with ChangeNotifier {
       isAwsCredRefreshing: false,
       idtoken: null,
       language: 'zh',
-      theme: "blue");
+      theme: Colors.pink);
   AuthState getAuthState() {
     return initialAuthState;
+  }
+
+  void settheme(Color key) {
+    initialAuthState.theme = key;
+    
+     notifyListeners();
   }
 }
 
@@ -33,7 +39,7 @@ class AuthState {
   bool isAwsCredRefreshing;
   IdToken idtoken;
   String language;
-  String theme;
+  Color theme;
 
   AuthState(
       {this.currentUser,

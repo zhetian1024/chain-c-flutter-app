@@ -111,6 +111,16 @@ class _Tabs extends State<Tabs> {
                       color: Colors.amber[100],
                       child: const Center(child: Text('资讯')),
                     ),
+                    InkWell(
+                      child: Container(
+                        height: 50,
+                        color: Colors.white,
+                        child:  Center(child: Text(IntlUtil.getString(context, Ids.titieSetting))),
+                      ),
+                      onTap: () {
+                        Navigator.pushNamed(context, '/setting');
+                      },
+                    ),
                   ],
                 ),
               ),
