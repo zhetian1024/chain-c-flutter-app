@@ -115,7 +115,7 @@ class _Tabs extends State<Tabs> {
                       child: Container(
                         height: 50,
                         color: Colors.white,
-                        child:  Center(child: Text(IntlUtil.getString(context, Ids.titieSetting))),
+                        child:  Center(child: Text(IntlUtil.getString(context, Ids.titleSetting))),
                       ),
                       onTap: () {
                         Navigator.pushNamed(context, '/setting');

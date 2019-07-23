@@ -6,6 +6,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fluintl/fluintl.dart';
 import 'res/language.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:chain_c_app_flutter/res/colors.dart';
 
 class MyApp extends StatefulWidget {
   @override
@@ -16,7 +18,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyApp extends State<MyApp> {
-  
   void initState() {
     super.initState();
 
@@ -24,22 +25,13 @@ class _MyApp extends State<MyApp> {
     setLocalizedValues(localizedValues); //配置多语言资源
   }
 
-  // void getlanguage() {
-  //   var language = Provider.value<Auth>(context).getAuthState().language;
-  //   setState(() {
-  //     _locale = new Locale(language);
-  //   });
-  // }
-
- 
-
   @override
   Widget build(BuildContext context) {
     // getthemeColor();
     // TODO: implement build
     // getlanguage();
     // getthemeColor();
-    
+
     return ChangeNotifierProvider(
       builder: (context) => Auth(),
       child: new HomeWidget(),
@@ -48,15 +40,29 @@ class _MyApp extends State<MyApp> {
 }
 
 class HomeWidget extends StatelessWidget {
-  
-
-  
-
   @override
   Widget build(BuildContext context) {
     final auth = Provider.of<Auth>(context);
+
+    Future getString() async {
+      SharedPreferences sharedPreferences =
+          await SharedPreferences.getInstance();
+
+      final storageString = sharedPreferences.get('theme');
+      final language = sharedPreferences.get('language');
+      auth.settheme(themeColorMap[storageString]);
+      if (language == null) {
+        auth.setlanguage('zh');
+      }else{
+        auth.setlanguage(language);
+      }
+
+     // print(language);
+    }
+
+    getString();
     final color = auth.authState.theme;
-final Locale _locale= new Locale(auth.authState.language);
+    final Locale _locale = new Locale(auth.authState.language);
     return new MaterialApp(
       theme: new ThemeData(
         brightness: Brightness.light,

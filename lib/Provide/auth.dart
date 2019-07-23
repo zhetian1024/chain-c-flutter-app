@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:chain_c_app_flutter/config/auth_interface.dart';
 import 'package:chain_c_app_flutter/config/aws_interface.dart';
 
+/**
+ * 
+ */
 class Auth with ChangeNotifier {
-  AuthState initialAuthState = AuthState(
+  AuthState _initialAuthState = AuthState(
       currentUser: null,
       authRedircetUrl: null,
       smsInput: null,
@@ -17,11 +20,17 @@ class Auth with ChangeNotifier {
       language: 'zh',
       theme: Colors.pink);
 
-  AuthState get authState => initialAuthState;
+  AuthState get authState => _initialAuthState;
 
   Future settheme(Color key) async {
-    initialAuthState.theme = key;
-    initialAuthState.language = 'en';
+    _initialAuthState.theme = key;
+   // _initialAuthState.language = 'en';
+    notifyListeners();
+  }
+
+  Future setlanguage(String key) async {
+    _initialAuthState.language = key;
+   // _initialAuthState.language = 'en';
     notifyListeners();
   }
 }

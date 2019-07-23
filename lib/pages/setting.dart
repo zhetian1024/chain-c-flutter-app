@@ -4,6 +4,8 @@ import 'package:fluintl/fluintl.dart';
 import 'package:chain_c_app_flutter/res/colors.dart';
 import 'package:provider/provider.dart';
 import 'package:chain_c_app_flutter/Provide/auth.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flustars/flustars.dart';
 
 String getlanguageModel(String key) {
   String languageModel = '';
@@ -20,17 +22,20 @@ String getlanguageModel(String key) {
   return languageModel;
 }
 
+save(String key, String value) async {
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  prefs.setString(key, value);
+}
+
 class SettingPage extends StatelessWidget {
-  
   @override
   Widget build(BuildContext context) {
     final provides = Provider.of<Auth>(context);
-    String languageModel =
-        getlanguageModel(provides.authState.language);
+    String languageModel = getlanguageModel(provides.authState.language);
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(IntlUtil.getString(context, Ids.titieSetting)),
+        title: Text(IntlUtil.getString(context, Ids.titleSetting)),
         centerTitle: true,
       ),
       body: ListView(
@@ -58,6 +63,7 @@ class SettingPage extends StatelessWidget {
                     onTap: () {
                       print(key);
                       provides.settheme(themeColorMap[key]);
+                      save('theme', key);
                     },
                     child: new Container(
                       margin: EdgeInsets.all(5.0),
@@ -71,6 +77,9 @@ class SettingPage extends StatelessWidget {
             ],
           ),
           new ListTile(
+            onTap: () {
+              Navigator.pushNamed(context, '/languagePage');
+            },
             title: new Row(
               children: <Widget>[
                 Icon(
@@ -93,7 +102,7 @@ class SettingPage extends StatelessWidget {
                       fontSize: 14.0,
                       color: Color(0xFF999999),
                     )),
-                Icon(Icons.keyboard_arrow_right)
+                Icon(Icons.keyboard_arrow_right),
               ],
             ),
           )

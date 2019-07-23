@@ -5,11 +5,13 @@ import 'machine.dart';
 import 'news.dart';
 import 'package:chain_c_app_flutter/pages/login.dart';
 import 'setting.dart';
+import 'language_page.dart';
 
 
 final routes = {'/': (context) => Tabs(),
 '/login':(context)=>Login(),
 '/setting':(context)=>SettingPage(),
+'/languagePage':(context)=>LanguagePage(),
 //  '/music': (context,{arguments}) => MusicPlayerExample(arguments:arguments),
 // '/search': (context) => Search(),
 // '/searchDetail': (context,{arguments}) => SearchDetail(arguments:arguments),
